@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | PDLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gray-800">PDLC Overview</h1>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Home</a>
+                    <a href="waterfall.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Waterfall</a>
+                    <a href="iterative.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Iterative</a>
+                    <a href="rad.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">RAD</a>
+                    <a href="quiz.html" class="nav-active text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Quiz</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-orange-500 to-orange-700 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-2">📝 Test Your Knowledge</h1>
+            <p class="text-xl opacity-90">Practice questions on PDLC models</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Instructions -->
+        <div class="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
+            <h2 class="font-bold text-blue-800 mb-2">Instructions</h2>
+            <p class="text-blue-700">
+                Read each question carefully. Click "Show Answer" to reveal the answer.
+                Use the "Reset Quiz" button to hide all answers and start fresh.
+            </p>
+        </div>
+
+        <!-- Reset Button -->
+        <div class="text-right mb-6">
+            <button id="reset-quiz" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg font-medium transition">
+                Reset All Answers
+            </button>
+        </div>
+
+        <!-- Questions -->
+
+        <!-- Question 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-start mb-4">
+                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 flex-shrink-0">1</span>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                        <!-- TODO: Replace with actual question from PDF -->
+                        What is the main characteristic of the Waterfall model that distinguishes it from other development methodologies?
+                    </h3>
+                </div>
+            </div>
+            <button class="show-answer-btn btn-primary px-6 py-2 rounded-lg font-medium" data-question-id="1">
+                Show Answer
+            </button>
+            <div id="answer-1" class="answer-hidden mt-4 p-4 bg-green-50 border-l-4 border-green-500 rounded">
+                <img src="assets/images/answers/Screenshot 2026-02-28 170000.png" alt="Answer to question 1" class="w-full max-w-2xl rounded shadow">
+            </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-start mb-4">
+                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 flex-shrink-0">2</span>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                        <!-- TODO: Replace with actual question from PDF -->
+                        Describe the key advantages of using the Iterative development approach.
+                    </h3>
+                </div>
+            </div>
+            <button class="show-answer-btn btn-primary px-6 py-2 rounded-lg font-medium" data-question-id="2">
+                Show Answer
+            </button>
+            <div id="answer-2" class="answer-hidden mt-4 p-4 bg-green-50 border-l-4 border-green-500 rounded">
+                <img src="assets/images/answers/Screenshot 2026-02-28 170201.png" alt="Answer to question 2" class="w-full max-w-2xl rounded shadow">
+            </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-start mb-4">
+                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 flex-shrink-0">3</span>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                        <!-- TODO: Replace with actual question from PDF -->
+                        In what situations would RAD (Rapid Application Development) be the most appropriate choice?
+                    </h3>
+                </div>
+            </div>
+            <button class="show-answer-btn btn-primary px-6 py-2 rounded-lg font-medium" data-question-id="3">
+                Show Answer
+            </button>
+            <div id="answer-3" class="answer-hidden mt-4 p-4 bg-green-50 border-l-4 border-green-500 rounded">
+                <img src="assets/images/answers/Screenshot 2026-02-28 170230.png" alt="Answer to question 3" class="w-full max-w-2xl rounded shadow">
+            </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex items-start mb-4">
+                <span class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3 flex-shrink-0">4</span>
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">
+                        <!-- TODO: Replace with actual question from PDF -->
+                        Compare and contrast the Waterfall and Iterative models. What are the main differences?
+                    </h3>
+                </div>
+            </div>
+            <button class="show-answer-btn btn-primary px-6 py-2 rounded-lg font-medium" data-question-id="4">
+                Show Answer
+            </button>
+            <div id="answer-4" class="answer-hidden mt-4 p-4 bg-green-50 border-l-4 border-green-500 rounded">
+                <img src="assets/images/answers/Screenshot 2026-02-28 170254.png" alt="Answer to question 4" class="w-full max-w-2xl rounded shadow">
+            </div>
+        </div>
+
+        <!-- Back to Home -->
+        <div class="text-center mt-12">
+            <a href="index.html" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium inline-block transition">
+                ← Back to Home
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">Based on Textbook Section 12.1 | A Level Computer Science</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/quiz.js"></script>
+</body>
+</html>
