@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iterative Model | PDLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gray-800">PDLC Overview</h1>
+                </div>
+                <div class="flex space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Home</a>
+                    <a href="waterfall.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Waterfall</a>
+                    <a href="iterative.html" class="nav-active text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Iterative</a>
+                    <a href="rad.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">RAD</a>
+                    <a href="quiz.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium transition">Quiz</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-gradient-to-r from-purple-500 to-purple-700 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold mb-2">🔄 Iterative Model</h1>
+            <p class="text-xl opacity-90">Cyclical refinement approach</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Description -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Description</h2>
+            <p class="text-gray-700 mb-3">
+                The Iterative model is a cyclical approach where software development occurs through repeated cycles (iterations).
+                Each iteration involves planning, designing, implementing, and testing a portion of the system, producing a working version that can be refined in subsequent iterations.
+            </p>
+            <p class="text-gray-700 mb-3">
+                Unlike Waterfall, the Iterative model allows developers to go back and make changes based on feedback from previous iterations.
+                Each cycle builds upon the previous one, gradually improving and expanding the software until it meets all requirements.
+            </p>
+            <p class="text-gray-700">
+                This approach is particularly effective when requirements are not fully understood at the outset, allowing the team to learn and adapt as the project progresses.
+            </p>
+        </div>
+
+        <!-- Interactive Diagram -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Interactive Diagram</h2>
+            <p class="text-gray-600 mb-6">Click on each phase to learn more</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- SVG Diagram -->
+                <div class="lg:col-span-2 diagram-container flex justify-center">
+                    <svg viewBox="0 0 500 500" class="w-full max-w-md h-auto">
+                        <!-- Center Circle -->
+                        <circle cx="250" cy="250" r="60" fill="#f3f4f6" stroke="#9333ea" stroke-width="2" />
+                        <text x="250" y="245" text-anchor="middle" fill="#9333ea" font-size="14" font-weight="bold">Iterative</text>
+                        <text x="250" y="265" text-anchor="middle" fill="#9333ea" font-size="12">Cycle</text>
+
+                        <!-- Planning -->
+                        <g class="diagram-phase"
+                           data-phase="Planning"
+                           data-description="Define objectives for this iteration. Determine what features or improvements will be included in this cycle.">
+                            <circle cx="250" cy="100" r="50" fill="#9333ea" />
+                            <text x="250" y="105" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Planning</text>
+                        </g>
+
+                        <!-- Arrow: Planning to Design -->
+                        <path d="M 285 120 Q 350 150 340 220" stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#arrowhead2)" />
+
+                        <!-- Design -->
+                        <g class="diagram-phase"
+                           data-phase="Design"
+                           data-description="Create designs for the features planned in this iteration. Update system architecture as needed.">
+                            <circle cx="370" cy="250" r="50" fill="#9333ea" />
+                            <text x="370" y="255" text-anchor="middle" fill="white" font-size="14" font-weight="bold">Design</text>
+                        </g>
+
+                        <!-- Arrow: Design to Implementation -->
+                        <path d="M 340 280 Q 300 350 250 365" stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#arrowhead2)" />
+
+                        <!-- Implementation -->
+                        <g class="diagram-phase"
+                           data-phase="Implementation"
+                           data-description="Code the designed features. Integrate new code with existing system from previous iterations.">
+                            <circle cx="250" cy="400" r="50" fill="#9333ea" />
+                            <text x="250" y="400" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Implement-</text>
+                            <text x="250" y="415" text-anchor="middle" fill="white" font-size="12" font-weight="bold">ation</text>
+                        </g>
+
+                        <!-- Arrow: Implementation to Testing -->
+                        <path d="M 215 380 Q 150 350 160 280" stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#arrowhead2)" />
+
+                        <!-- Testing & Evaluation -->
+                        <g class="diagram-phase"
+                           data-phase="Testing & Evaluation"
+                           data-description="Test the new features. Evaluate the iteration against requirements. Gather feedback for the next iteration.">
+                            <circle cx="130" cy="250" r="50" fill="#9333ea" />
+                            <text x="130" y="245" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Testing &</text>
+                            <text x="130" y="260" text-anchor="middle" fill="white" font-size="12" font-weight="bold">Evaluation</text>
+                        </g>
+
+                        <!-- Arrow: Testing back to Planning -->
+                        <path d="M 160 220 Q 150 150 215 120" stroke="#6b7280" stroke-width="3" fill="none" marker-end="url(#arrowhead2)" />
+
+                        <!-- Circular arrow indicating cycle -->
+                        <path d="M 300 100 Q 420 100 420 250 Q 420 400 300 400 Q 180 400 180 250 Q 180 100 300 100"
+                              stroke="#d8b4fe" stroke-width="2" stroke-dasharray="5,5" fill="none" opacity="0.5" />
+
+                        <!-- Arrow marker definition -->
+                        <defs>
+                            <marker id="arrowhead2" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                                <polygon points="0 0, 10 5, 0 10" fill="#6b7280" />
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+
+                <!-- Phase Info Panel -->
+                <div class="lg:col-span-1">
+                    <div class="bg-purple-50 rounded-lg p-6 sticky top-24">
+                        <div id="phase-info">
+                            <h3 class="text-xl font-bold text-purple-600 mb-2">Select a Phase</h3>
+                            <p class="text-gray-700">Click on any phase in the diagram to see its description.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advantages -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">✅ Advantages</h2>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>Flexibility to changes:</strong> Requirements can evolve between iterations based on user feedback and learning.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>Working software early:</strong> Produces functional versions at the end of each iteration, allowing early user testing.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>Risk reduction:</strong> Problems are identified and addressed early through continuous testing and refinement.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>Better suited for large projects:</strong> Complex projects can be broken down into manageable iterations.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-green-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>Continuous improvement:</strong> Each iteration builds on lessons learned from previous cycles.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Disadvantages -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">❌ Disadvantages</h2>
+            <ul class="space-y-3">
+                <li class="flex items-start">
+                    <span class="text-red-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>More complex management:</strong> Requires careful planning and coordination across multiple iterations.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>Requires more resources:</strong> Repeated cycles mean more time, cost, and team involvement.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>Scope creep risk:</strong> Continuous changes can lead to expanding project scope without proper control.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>End date uncertainty:</strong> Difficult to determine when the project will be fully complete.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-red-500 mr-3 text-xl">•</span>
+                    <span class="text-gray-700"><strong>Requires skilled team:</strong> Team must be experienced in managing iterative processes and adapting to changes.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Appropriate Contexts -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">🎯 When to Use Iterative</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-purple-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-purple-800 mb-2">✓ Ideal For:</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Requirements that are not fully understood initially</li>
+                        <li>• Large, complex projects</li>
+                        <li>• Projects requiring frequent user feedback</li>
+                        <li>• Systems that can be developed incrementally</li>
+                        <li>• Projects where risk must be minimized early</li>
+                    </ul>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg">
+                    <h3 class="font-bold text-red-800 mb-2">✗ Avoid For:</h3>
+                    <ul class="space-y-2 text-gray-700">
+                        <li>• Projects with very tight fixed budgets</li>
+                        <li>• Systems with strict regulatory requirements</li>
+                        <li>• Projects requiring complete documentation upfront</li>
+                        <li>• Small, simple projects with clear requirements</li>
+                        <li>• Teams without iterative development experience</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex justify-between items-center mt-12">
+            <a href="waterfall.html" class="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-medium transition">
+                ← Previous: Waterfall
+            </a>
+            <a href="rad.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                Next: RAD Model →
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">Based on Textbook Section 12.1 | A Level Computer Science</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/diagrams.js"></script>
+</body>
+</html>
