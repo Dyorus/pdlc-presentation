@@ -8,7 +8,7 @@ This website was created for an A Level Computer Science presentation on textboo
 
 ## 🌐 View Live
 
-**GitHub Pages URL:** `https://Dyorus.github.io/pdlc-presentation/`
+**GitHub Pages URL:** https://dyorus.github.io/pdlc-presentation/
 
 ## 📖 Content
 
